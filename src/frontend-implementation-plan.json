@@ -1,0 +1,395 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "NISHQ Trust-First E-Commerce Platform MVP - Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create landing page hero section with trust-first messaging and CTAs",
+      "acceptanceCriteria": [
+        "Hero section displays exact headline and subheadline text",
+        "Two CTA buttons present with specified text",
+        "Four trust signals visible above the fold",
+        "Layout follows minimal, professional, authority-driven design"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "create",
+          "description": "Create landing page component with hero section containing headline 'Buy with certainty. Not guesswork.', subheadline about verified reviews and trust scores, primary CTA 'Browse Trusted Products' linking to catalog, secondary CTA 'How We Prevent Fake Reviews' linking to transparency section. Include four trust signals above the fold: reviews after delivery/usage, visible seller history, no fake MRPs, non-resettable trust scores. Use the generated hero-background.dim_1920x600.png asset at frontend/public/assets/generated/hero-background.dim_1920x600.png as background. Apply neutral color palette with soft blue/green accents, professional typography, and mobile-first responsive design."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for LandingPage component as the root path '/'. Import and register the LandingPage component in the router configuration. Ensure it is set as the default landing route for unauthenticated visitors."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add landing page content sections and footer with transparency information",
+      "acceptanceCriteria": [
+        "All four core sections present with specified content",
+        "Footer contains three required links/sections",
+        "Content uses calm, respectful, non-marketing tone",
+        "Simple, clear English throughout"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Add sections to LandingPage: 'Why Nishq exists' explaining optimization for certainty over sales, 'Why we are different' listing five differentiators (verified reviews, lifetime trust scores, honest pricing, public return patterns, explainable recommendations), 'How trust is calculated' showing delivery success/return behavior/review authenticity/dispute outcomes, 'Who this platform is for' targeting careful buyers, families, and honest sellers. Use calm, respectful tone without marketing language. Apply consistent neutral styling with professional typography hierarchy."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "create",
+          "description": "Create footer component with transparency policy link, grievance/dispute resolution process link, and contact information section. Use the generated nishq-logo.dim_400x100.png from frontend/public/assets/generated/nishq-logo.dim_400x100.png in footer branding. Style with neutral colors, minimal design, and mobile-responsive layout matching landing page aesthetic."
+        },
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Import and include Footer component at bottom of LandingPage."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create product catalog page with trust indicators in grid layout",
+      "acceptanceCriteria": [
+        "Grid layout displays multiple products",
+        "Each product card shows trust score, account age, return %, and review risk",
+        "Prices shown without crossed-out MRPs",
+        "Products clickable to navigate to detail page"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/CatalogPage.tsx",
+          "operation": "create",
+          "description": "Create product catalog page displaying products in responsive grid layout. Fetch products using getAllProducts() backend method. For each product card show: product image (using ExternalBlob.getDirectURL()), product name, final price without fake MRPs or crossed prices, seller trust score (0-100) from seller data, seller account age from seller data, return percentage (mock from product data), and fake review risk indicator (Low/Medium/High). Make cards clickable navigating to /product/:productId. Use the generated trust-icons.dim_256x256.png from frontend/public/assets/generated/trust-icons.dim_256x256.png for trust indicator icons. Apply neutral color palette, professional styling, mobile-first responsive grid."
+        },
+        {
+          "path": "frontend/src/hooks/useProducts.ts",
+          "operation": "create",
+          "description": "Create React Query hook for fetching all products using getAllProducts() backend method. Return loading state, error state, and products array. Enable caching and refetching on mount."
+        },
+        {
+          "path": "frontend/src/hooks/useSellers.ts",
+          "operation": "create",
+          "description": "Create React Query hook for fetching all sellers using getAllSellers() backend method. Return loading state, error state, and sellers map keyed by sellerId for efficient lookup. Enable caching."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for CatalogPage component at path '/catalog'. Import and register in router. Link primary CTA from landing page hero to this route."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build product detail page with trust information above price section",
+      "acceptanceCriteria": [
+        "Trust metrics visible without scrolling",
+        "Trust score includes explanatory tooltip",
+        "All five required fields present in top section",
+        "Trust information positioned above price section"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProductDetailPage.tsx",
+          "operation": "create",
+          "description": "Create product detail page component. Use useParams to get productId from URL. Fetch product using getProduct(productId) and seller using getSeller(product.sellerId) backend methods. Top section (no scroll) must display: product name, seller trust score (0-100) with tooltip explaining lifetime calculation basis, seller account age in days/months/years, return percentage, fake review risk indicator (Low/Medium/High). Position trust information section above price section. Use the generated trust-icons.dim_256x256.png from frontend/public/assets/generated/trust-icons.dim_256x256.png for trust indicators. Apply neutral styling, professional typography, mobile-first layout."
+        },
+        {
+          "path": "frontend/src/hooks/useProduct.ts",
+          "operation": "create",
+          "description": "Create React Query hook for fetching single product by ID using getProduct(productId) backend method. Accept productId parameter. Return loading, error, and product data states."
+        },
+        {
+          "path": "frontend/src/hooks/useSeller.ts",
+          "operation": "create",
+          "description": "Create React Query hook for fetching single seller by ID using getSeller(sellerId) backend method. Accept sellerId parameter. Return loading, error, and seller data states."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for ProductDetailPage component at path '/product/:productId'. Import and register in router."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add product page price section with breakdown and calm checkout CTA",
+      "acceptanceCriteria": [
+        "Price breakdown shows tax, delivery, and warranty separately",
+        "No artificial discounts or crossed-out prices",
+        "CTA uses exact text 'Proceed to Secure Checkout'",
+        "No countdown timers or stock warnings present"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProductDetailPage.tsx",
+          "operation": "modify",
+          "description": "Add price section below trust information displaying final price clearly with explicit breakdown showing base price, tax amount, delivery cost, and warranty cost separately (calculate from product.price field). Show total final price prominently. Do not show fake MRPs, crossed prices, or artificial discounts. Include calm CTA button with exact text 'Proceed to Secure Checkout' linking to /checkout/:productId. Use neutral button styling without urgency colors. No countdown timers, stock pressure warnings, or manipulative urgency tactics."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create verified reviews section with usage days and timeline display",
+      "acceptanceCriteria": [
+        "Each review displays 'Used for X days' badge",
+        "Reviews show user history badges/weights",
+        "Timeline-based display implemented",
+        "Suspicious pattern warnings visible when triggered",
+        "Only verified reviews can be displayed"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProductDetailPage.tsx",
+          "operation": "modify",
+          "description": "Add reviews section to ProductDetailPage. Fetch reviews using getProductReviews(productId) backend method. Display only verified reviews (review.verified === true). For each review show: 'Used for X days' badge from review.usageDays, user history weight indicators, rating, and review content. Implement timeline-based display showing reviews chronologically. Add warning indicators for suspicious patterns when flagged. Apply neutral styling with muted colors for trust indicators, professional typography."
+        },
+        {
+          "path": "frontend/src/hooks/useProductReviews.ts",
+          "operation": "create",
+          "description": "Create React Query hook for fetching product reviews using getProductReviews(productId) backend method. Accept productId parameter. Return loading, error, and reviews array states. Enable caching and refetching."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Add seller transparency panel showing history and trust metrics",
+      "acceptanceCriteria": [
+        "All six seller metrics displayed in panel",
+        "History timeline shows chronological seller activity",
+        "Violations and penalties visible to all users",
+        "Trust score shows lifetime calculation basis",
+        "Panel positioned prominently on product page"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProductDetailPage.tsx",
+          "operation": "modify",
+          "description": "Add seller transparency panel to ProductDetailPage positioned prominently below price section. Display from seller data: seller history timeline (array of chronological events from seller.historyTimeline), total orders completed (seller.totalOrders), disputes won vs lost (seller.disputesWon, seller.disputesLost), policy violations in last 6 months (seller.policyViolations), platform penalties publicly visible (seller.penalties), and lifetime-based seller trust score (seller.trustScore) with explanation that it cannot be reset. Use timeline visualization for history. Apply neutral styling with red only for violations/penalties."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Include decision support sections with honest product guidance",
+      "acceptanceCriteria": [
+        "All four decision support sections present",
+        "Return reasons aggregated and displayed publicly",
+        "Content uses honest, non-manipulative language",
+        "Trade-offs presented fairly"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProductDetailPage.tsx",
+          "operation": "modify",
+          "description": "Add decision support sections to ProductDetailPage below seller transparency panel: 'Who should buy this product' (target audience), 'Who should avoid this product' (unsuitable use cases), 'Honest trade-offs and limitations' (from product.tradeOffs array), and 'Top public return reasons' showing aggregated return reasons (from product.returnReasons array with categories: quality, size, mismatch). Use informative, honest, non-sales-driven language. Apply neutral styling with clear section headings and professional typography."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Build checkout page with anxiety-free design and clear timelines",
+      "acceptanceCriteria": [
+        "Checkout flow uses minimal, calm design",
+        "Escrow timeline shows specific dates",
+        "Refund policy clearly stated with dates",
+        "Security messaging positive, not fear-based",
+        "Platform protection terms visible"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/CheckoutPage.tsx",
+          "operation": "create",
+          "description": "Create checkout page with simple, anxiety-free design. Use useParams to get productId. Display product summary, final price breakdown, and clear escrow timeline with exact dates (e.g., 'Payment held until [date]', 'Refund available until [date]'). Include security reassurance using positive language (avoid fear-based messaging like 'Your data is NOT at risk'). Reinforce platform protection and seller accountability statements. Use calm, professional styling with neutral colors, no urgency tactics, no countdown timers. Include simple form for shipping address and payment method selection (UI only, no actual payment processing per nonGoals)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for CheckoutPage component at path '/checkout/:productId'. Import and register in router."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Create admin panel for seller management with CRUD operations",
+      "acceptanceCriteria": [
+        "Admin can create new seller profiles",
+        "All seller metrics editable (trust score, age, orders, disputes, violations, penalties)",
+        "Seller list view with search/filter",
+        "Seller history timeline can be populated",
+        "Changes reflect immediately on product pages"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/admin/AdminSellersPage.tsx",
+          "operation": "create",
+          "description": "Create admin sellers management page. Use the authorization component to guard access: check isCallerAdmin() before rendering. Display list of all sellers from getAllSellers() with search/filter functionality. Include 'Add New Seller' button opening form. For each seller show: name, trustScore, accountAgeDays, totalOrders, disputesWon, disputesLost, policyViolations, penalties, and edit button. Form allows creating/editing all seller fields including history timeline entries (array of text events). On submit, call addSeller(seller) backend method. Use the generated admin-dashboard-bg.dim_1600x900.png from frontend/public/assets/generated/admin-dashboard-bg.dim_1600x900.png as background. Apply fintech-style dashboard aesthetic with neutral tones, professional forms, clear data tables."
+        },
+        {
+          "path": "frontend/src/components/admin/SellerForm.tsx",
+          "operation": "create",
+          "description": "Create reusable seller form component for creating/editing sellers. Include fields: name (text), trustScore (0-100 number), accountAgeDays (number), totalOrders (number), disputesWon (number), disputesLost (number), policyViolations (number), penalties (number), historyTimeline (array input for timeline events). Include validation for trustScore range 0-100. Accept onSubmit callback receiving Seller object. Apply professional form styling with clear labels and helpful field descriptions."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for AdminSellersPage component at path '/admin/sellers'. Import and register in router. Wrap with authorization guard checking isCallerAdmin()."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Add admin panel product management with associations and decision support",
+      "acceptanceCriteria": [
+        "Admin can create products with all required fields",
+        "Products linked to seller accounts",
+        "Price breakdowns configurable",
+        "Product images uploadable",
+        "Decision support content editable per product",
+        "Review risk and return % settable"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/admin/AdminProductsPage.tsx",
+          "operation": "create",
+          "description": "Create admin products management page. Guard with isCallerAdmin() check using the authorization component. Display list of all products from getAllProducts() with search/filter. Include 'Add New Product' button. For each product show: name, price, associated seller name, and edit button. Form for creating/editing products includes: name, description, price (as breakdown base amount), sellerId (dropdown of available sellers), images (upload using ExternalBlob.fromBytes with upload progress via withUploadProgress, verifying the blob-storage component usage instructions before implementing), tradeOffs array, returnReasons array, fakeReviewRisk (Low/Medium/High dropdown), returnPercentage (number). On submit call addProduct(product). Use admin-dashboard-bg.dim_1600x900.png background. Apply fintech dashboard styling."
+        },
+        {
+          "path": "frontend/src/components/admin/ProductForm.tsx",
+          "operation": "create",
+          "description": "Create reusable product form component for creating/editing products. Fields: name, description, price, sellerId (select from sellers list), images (file upload with preview and progress bar using ExternalBlob, verifying component usage before implementing), tradeOffs (array input), returnReasons (array input), fakeReviewRisk (select Low/Medium/High), returnPercentage (number 0-100). Accept onSubmit callback. Include validation. Apply professional form styling with sections for basic info, pricing, decision support content, and trust indicators."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for AdminProductsPage component at path '/admin/products'. Import and register in router with admin authorization guard."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Implement admin panel review management with verification controls",
+      "acceptanceCriteria": [
+        "Admin can create reviews for any product",
+        "Usage days field configurable",
+        "User history badges assignable",
+        "Verified status toggleable",
+        "Suspicious pattern flag available",
+        "Reviews appear on product page after creation"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/admin/AdminReviewsPage.tsx",
+          "operation": "create",
+          "description": "Create admin reviews management page. Guard with isCallerAdmin() using authorization component. Display list of all reviews from getAllReviews() grouped by product with search/filter. Include 'Add New Review' button. For each review show: productId, userId, rating, usageDays, verified status, suspicious flag, and edit button. Form includes: productId (select from products), userId (text/Principal), rating (1-5), content (textarea), usageDays (number), verified (checkbox), userHistoryWeight (text badges input), suspiciousPattern (checkbox). On submit call addReview(review). Reviews appear immediately on product pages via cache invalidation. Use admin-dashboard-bg.dim_1600x900.png. Apply fintech dashboard styling."
+        },
+        {
+          "path": "frontend/src/components/admin/ReviewForm.tsx",
+          "operation": "create",
+          "description": "Create reusable review form component. Fields: productId (select), userId (text), rating (1-5 number input or star selector), content (textarea), usageDays (number), verified (checkbox), userHistoryWeight (text for badges), suspiciousPattern (checkbox). Accept onSubmit callback. Include validation for rating range and required fields. Apply professional form styling."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for AdminReviewsPage component at path '/admin/reviews'. Import and register in router with admin authorization guard."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Implement dark mode with fintech dashboard aesthetic and theme toggle",
+      "acceptanceCriteria": [
+        "Dark mode uses specified color palette",
+        "Trust indicators use muted green/blue in dark mode",
+        "Red reserved for warnings in both modes",
+        "Theme toggle present and functional",
+        "User preference persists across sessions",
+        "All pages support both themes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/context/ThemeContext.tsx",
+          "operation": "create",
+          "description": "Create theme context providing theme state ('light' | 'dark') and toggle function. Initialize from localStorage 'theme' key, defaulting to 'light'. On toggle, update localStorage and apply/remove 'dark' class on document.documentElement. Persist preference across sessions."
+        },
+        {
+          "path": "frontend/src/components/ThemeToggle.tsx",
+          "operation": "create",
+          "description": "Create theme toggle button component using ThemeContext. Show sun icon for light mode, moon icon for dark mode. Toggle theme on click. Style consistently with neutral design. Position in header/navigation."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Configure Tailwind dark mode using 'class' strategy. Define dark mode color palette: deep charcoal/near-black backgrounds (bg-neutral-900), soft neutral grey cards (bg-neutral-800), muted green (emerald-700) and blue (blue-700) for trust indicators, red (red-600) only for warnings/violations. Ensure high contrast and low eye strain. Apply fintech/compliance dashboard aesthetic."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add dark mode CSS variables and global styles. Define color tokens for light and dark themes matching specified palette. Dark mode: deep charcoal background, soft grey cards, muted green/blue accents, red warnings. Light mode: white/light grey background, soft blue/green accents. Ensure consistent application across all components."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap App component with ThemeContext provider. Include ThemeToggle component in main layout/header. Ensure theme class applied to root element."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Apply consistent visual style across all pages with authority-driven design",
+      "acceptanceCriteria": [
+        "Consistent neutral color palette across all pages",
+        "Typography hierarchy clear and professional",
+        "Responsive design works on mobile, tablet, desktop",
+        "Micro-interactions subtle and functional",
+        "No aggressive or sales-driven UI patterns",
+        "Brand personality reflected in all design choices"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define global design system in index.css: neutral color palette (white, light grey, soft blue or green accents, no blue/purple unless requested), strong typography hierarchy with clear heading scales (h1-h6), professional sans-serif font stack, functional micro-interactions (subtle hover states, smooth transitions), mobile-first breakpoints. Apply calm, strict, honest, authoritative, fair brand personality through typography, spacing, and interaction patterns. Ensure minimal, professional, authority-driven aesthetic throughout."
+        },
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "create",
+          "description": "Create header component with NISHQ logo (using frontend/public/assets/generated/nishq-logo.dim_400x100.png), main navigation links (Home, Catalog, Admin for admins), and ThemeToggle. Include authorization component for login button and role-based navigation visibility. Apply neutral styling, professional typography, mobile-responsive with hamburger menu on small screens."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create layout wrapper component including Header at top, main content area with consistent padding and max-width, and Footer at bottom. Apply consistent neutral background, professional spacing, mobile-first responsive design. Use this layout for all main pages."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap all routes with Layout component to ensure consistent header, footer, and styling across all pages. Import and apply Layout wrapper."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Implement algorithm transparency with visible recommendation explanations",
+      "acceptanceCriteria": [
+        "Each product shows recommendation explanation",
+        "Explanation text clearly visible",
+        "Recommendation logic transparent and honest",
+        "No paid placement indicators",
+        "Admin can configure recommendation reasons per product"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/CatalogPage.tsx",
+          "operation": "modify",
+          "description": "Add recommendation explanation text to each product card in catalog. Display visible explanation like 'Shown because of your browsing history, seller trust score, and low return rate.' Position explanation clearly below product name or above trust indicators. Use neutral styling with slightly muted text color. Ensure explanation text is honest and transparent. No hidden ranking or paid placement indicators. For MVP, show generic explanation (since browsing history not tracked yet). Admin can configure explanation reasons per product in future iterations."
+        }
+      ]
+    }
+  ]
+}

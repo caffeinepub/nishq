@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Trust-first Indian e-commerce platform called NISHQ that solves trust, fake reviews, seller transparency, and pricing manipulation problems. Full MVP includes: (1) complete user flow from homepage to checkout, (2) admin panel for managing sellers/products/reviews, (3) simplified review verification system with manual verification through admin panel.",
+  "architectural_notes": [
+    "Motoko backend with React + TypeScript frontend",
+    "Trust-first design philosophy: no dark patterns, fake discounts, or manipulative algorithms",
+    "Mobile-first responsive design with minimal, authority-driven aesthetic",
+    "Seller trust scores are lifetime-based and publicly visible",
+    "Reviews require delivery verification and usage time before unlocking",
+    "All product recommendations must include visible explanations",
+    "Dark mode variant with deep charcoal background and muted trust indicators"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Professional, authority-driven NISHQ logo with clean typography emphasizing trust and certainty (nishq-logo.dim_400x100.png)\n- Minimalist hero section background illustration showing trust and transparency concepts with neutral colors and geometric shapes (hero-background.dim_1920x600.png)\n- Icon set for trust indicators: shield for trust score, calendar for account age, return arrow for return rate, warning triangle for fake review risk (trust-icons.dim_256x256.png)\n- Fintech-style dashboard illustration for admin panel with neutral tones and professional aesthetic (admin-dashboard-bg.dim_1600x900.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-landing-page-with-hero-section-containing-headline-buy-with-certainty-not-guesswork-subheadline-verified-reviews-transparent-sellers-and-lifetime-trust-scores-so-you-always-know-what-you-re-buying-primary-cta-browse-trusted-products-and-secondary-cta-how-we-prevent-fake-reviews-include-above-the-fold-trust-signals-reviews-allowed-only-after-delivery-and-usage-time-seller-history-visible-to-everyone-no-fake-mrps-or-artificial-discounts-and-trust-scores-cannot-be-reset",
+      "title": "Create a landing page with hero section containing headline 'Buy with certainty. Not guesswork.', subheadline 'Verified reviews, transparent sellers, and lifetime trust scores — so you always know what you're buying.', primary CTA 'Browse Trusted Products', and secondary CTA 'How We Prevent Fake Reviews'. Include above-the-fold trust signals: reviews allowed only after delivery and usage time, seller history visible to everyone, no fake MRPs or artificial discounts, and trust scores cannot be reset.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-landing-page-sections-for-why-nishq-exists-explaining-optimization-for-certainty-not-sales-why-we-are-different-listing-five-key-differentiators-verified-reviews-lifetime-seller-trust-scores-honest-pricing-public-return-patterns-explainable-recommendations-how-trust-is-calculated-delivery-success-return-behaviour-review-authenticity-public-dispute-outcomes-and-who-this-platform-is-for-careful-buyers-families-honest-sellers-include-footer-with-transparency-policy-grievance-process-and-contact-information",
+      "title": "Add landing page sections for 'Why Nishq exists' (explaining optimization for certainty not sales), 'Why we are different' (listing five key differentiators: verified reviews, lifetime seller trust scores, honest pricing, public return patterns, explainable recommendations), 'How trust is calculated' (delivery success, return behaviour, review authenticity, public dispute outcomes), and 'Who this platform is for' (careful buyers, families, honest sellers). Include footer with transparency policy, grievance process, and contact information.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-product-catalog-browsing-page-showing-products-with-trust-indicators-including-seller-trust-score-0-100-seller-account-age-return-percentage-and-fake-review-risk-indicator-low-medium-high-display-products-in-grid-layout-with-product-image-name-final-price-without-fake-mrps-and-trust-metrics-visible-for-each-item",
+      "title": "Create product catalog/browsing page showing products with trust indicators including seller trust score (0-100), seller account age, return percentage, and fake review risk indicator (Low/Medium/High). Display products in grid layout with product image, name, final price without fake MRPs, and trust metrics visible for each item.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-detailed-product-page-with-trust-information-appearing-before-price-and-purchase-actions-top-section-no-scroll-required-must-display-product-name-seller-trust-score-0-100-with-tooltip-explanation-seller-account-age-return-percentage-and-fake-review-risk-indicator-low-medium-high",
+      "title": "Build detailed product page with trust information appearing BEFORE price and purchase actions. Top section (no scroll required) must display: product name, seller trust score (0-100) with tooltip explanation, seller account age, return percentage, and fake review risk indicator (Low/Medium/High).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-product-page-price-section-showing-final-price-clearly-with-explicit-breakdown-tax-delivery-warranty-with-no-fake-mrps-or-crossed-prices-include-calm-cta-button-with-text-proceed-to-secure-checkout-without-countdowns-stock-pressure-or-urgency-manipulation",
+      "title": "Add product page price section showing final price clearly with explicit breakdown (tax, delivery, warranty), with no fake MRPs or crossed prices. Include calm CTA button with text 'Proceed to Secure Checkout' without countdowns, stock pressure, or urgency manipulation.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-reviews-section-on-product-page-showing-only-verified-buyer-reviews-that-unlock-after-delivery-and-usage-time-each-review-must-display-used-for-x-days-be-weighted-by-user-history-and-show-timeline-based-display-instead-of-simple-star-averages-include-automatic-de-emphasis-of-repeated-phrases-and-suspicious-patterns-with-warning-indicators-for-sudden-rating-spikes",
+      "title": "Create reviews section on product page showing only verified buyer reviews that unlock after delivery and usage time. Each review must display 'Used for X days', be weighted by user history, and show timeline-based display instead of simple star averages. Include automatic de-emphasis of repeated phrases and suspicious patterns, with warning indicators for sudden rating spikes.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-seller-transparency-panel-to-product-page-showing-seller-history-timeline-total-orders-completed-disputes-won-vs-lost-policy-violations-last-6-months-platform-penalties-publicly-visible-and-lifetime-based-seller-trust-score-that-cannot-be-reset-panel-must-be-prominent-and-easily-accessible",
+      "title": "Add seller transparency panel to product page showing: seller history timeline, total orders completed, disputes won vs lost, policy violations (last 6 months), platform penalties publicly visible, and lifetime-based seller trust score that cannot be reset. Panel must be prominent and easily accessible.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-decision-support-sections-on-product-page-who-should-buy-this-product-who-should-avoid-this-product-honest-trade-offs-and-limitations-and-top-public-return-reasons-quality-size-mismatch-content-must-be-informative-and-honest-not-sales-driven",
+      "title": "Include decision support sections on product page: 'Who should buy this product', 'Who should avoid this product', 'Honest trade-offs and limitations', and 'Top public return reasons' (quality, size, mismatch). Content must be informative and honest, not sales-driven.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-checkout-page-with-simple-anxiety-free-design-featuring-clear-escrow-and-refund-timelines-with-exact-dates-security-reassurance-without-fear-based-messaging-and-reinforcement-of-platform-protection-and-seller-accountability-use-calm-professional-styling",
+      "title": "Build checkout page with simple, anxiety-free design featuring clear escrow and refund timelines with exact dates, security reassurance without fear-based messaging, and reinforcement of platform protection and seller accountability. Use calm, professional styling.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-admin-panel-for-managing-sellers-including-adding-new-sellers-setting-seller-trust-scores-0-100-entering-seller-account-age-total-orders-completed-disputes-won-lost-policy-violations-and-platform-penalties-allow-editing-and-viewing-seller-history-timeline",
+      "title": "Create admin panel for managing sellers including adding new sellers, setting seller trust scores (0-100), entering seller account age, total orders completed, disputes won/lost, policy violations, and platform penalties. Allow editing and viewing seller history timeline.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-admin-panel-functionality-for-managing-products-including-creating-products-associating-them-with-sellers-setting-prices-with-tax-delivery-warranty-breakdowns-uploading-product-images-and-entering-decision-support-content-who-should-buy-who-should-avoid-trade-offs-return-reasons-allow-setting-fake-review-risk-indicator-low-medium-high-and-return-percentage",
+      "title": "Add admin panel functionality for managing products including creating products, associating them with sellers, setting prices with tax/delivery/warranty breakdowns, uploading product images, and entering decision support content (who should buy, who should avoid, trade-offs, return reasons). Allow setting fake review risk indicator (Low/Medium/High) and return percentage.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-admin-panel-review-management-allowing-manual-creation-of-verified-reviews-setting-used-for-x-days-value-assigning-user-history-weights-badges-marking-reviews-as-verified-and-flagging-suspicious-patterns-reviews-must-be-linkable-to-specific-products-and-display-on-product-pages-immediately-after-creation",
+      "title": "Implement admin panel review management allowing manual creation of verified reviews, setting 'Used for X days' value, assigning user history weights/badges, marking reviews as verified, and flagging suspicious patterns. Reviews must be linkable to specific products and display on product pages immediately after creation.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-dark-mode-variant-with-deep-charcoal-or-near-black-background-soft-neutral-grey-cards-muted-green-or-blue-for-trust-indicators-red-only-for-warnings-violations-fintech-compliance-dashboard-feel-and-high-contrast-with-low-eye-strain-include-toggle-to-switch-between-light-and-dark-modes-persisting-user-preference",
+      "title": "Implement dark mode variant with deep charcoal or near-black background, soft neutral grey cards, muted green or blue for trust indicators, red only for warnings/violations, fintech/compliance dashboard feel, and high contrast with low eye strain. Include toggle to switch between light and dark modes, persisting user preference.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-visual-style-across-all-pages-minimal-professional-authority-driven-design-with-neutral-colors-white-light-grey-soft-blue-or-green-strong-typography-hierarchy-functional-micro-interactions-only-and-mobile-first-responsive-layout-avoid-blue-and-purple-color-schemes-ensure-calm-strict-honest-authoritative-fair-brand-personality-throughout",
+      "title": "Apply visual style across all pages: minimal, professional, authority-driven design with neutral colors (white, light grey, soft blue or green), strong typography hierarchy, functional micro-interactions only, and mobile-first responsive layout. Avoid blue and purple color schemes. Ensure calm, strict, honest, authoritative, fair brand personality throughout.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-algorithm-transparency-on-catalog-browsing-page-where-every-product-recommendation-includes-visible-explanation-text-like-shown-because-of-your-browsing-history-seller-trust-score-and-low-return-rate-ensure-no-hidden-ranking-boosts-and-no-paid-placements-disguised-as-recommendations",
+      "title": "Implement algorithm transparency on catalog/browsing page where every product recommendation includes visible explanation text like 'Shown because of your browsing history, seller trust score, and low return rate.' Ensure no hidden ranking boosts and no paid placements disguised as recommendations.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Landing page with trust-first messaging, hero section, and brand identity",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Product catalog/browsing with trust indicators",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Detailed product page with seller transparency panel, trust scores, and verified reviews",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Calm, anxiety-free checkout flow with escrow and refund timelines",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Admin panel for managing sellers, products, trust scores, and verified reviews",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Dark mode support with fintech/compliance aesthetic",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Review system with manual verification, usage days display, and user history weighting UI",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Create backend data models and API endpoints for Sellers (with trust score, account age, orders, disputes, violations, penalties, history timeline), Products (with name, price breakdown, images, decision support content, fake review risk, return percentage, seller association), and Reviews (with verified status, usage days, user history weight, suspicious pattern flag, product association). Implement CRUD operations accessible from admin panel.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Populate initial mock data demonstrating the platform with 3-5 realistic seller profiles (varying trust scores from 45 to 92), 10-15 products across different categories, and 20-30 verified reviews with varied usage days and user history badges. Include examples of sellers with violations, products with high/low return rates, and suspicious review patterns to showcase trust system.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "NISHQ",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

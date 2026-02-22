@@ -1,0 +1,387 @@
+{
+  "kind": "build_request",
+  "title": "Build NISHQ Trust-First E-Commerce Platform MVP",
+  "projectName": "NISHQ",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a landing page with hero section containing headline 'Buy with certainty. Not guesswork.', subheadline 'Verified reviews, transparent sellers, and lifetime trust scores — so you always know what you're buying.', primary CTA 'Browse Trusted Products', and secondary CTA 'How We Prevent Fake Reviews'. Include above-the-fold trust signals: reviews allowed only after delivery and usage time, seller history visible to everyone, no fake MRPs or artificial discounts, and trust scores cannot be reset.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Headline: \"Buy with certainty. Not guesswork.\"",
+          "Primary CTA: \"Browse Trusted Products\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section displays exact headline and subheadline text",
+        "Two CTA buttons present with specified text",
+        "Four trust signals visible above the fold",
+        "Layout follows minimal, professional, authority-driven design"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add landing page sections for 'Why Nishq exists' (explaining optimization for certainty not sales), 'Why we are different' (listing five key differentiators: verified reviews, lifetime seller trust scores, honest pricing, public return patterns, explainable recommendations), 'How trust is calculated' (delivery success, return behaviour, review authenticity, public dispute outcomes), and 'Who this platform is for' (careful buyers, families, honest sellers). Include footer with transparency policy, grievance process, and contact information.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Core sections: 1. Why Nishq exists Most marketplaces optimise for sales. Nishq optimises for certainty.",
+          "Footer: - Transparency policy - Grievance and dispute resolution process - Clear contact information"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All four core sections present with specified content",
+        "Footer contains three required links/sections",
+        "Content uses calm, respectful, non-marketing tone",
+        "Simple, clear English throughout"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create product catalog/browsing page showing products with trust indicators including seller trust score (0-100), seller account age, return percentage, and fake review risk indicator (Low/Medium/High). Display products in grid layout with product image, name, final price without fake MRPs, and trust metrics visible for each item.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3",
+          "msg-4"
+        ],
+        "quotes": [
+          "Product catalog with trust indicators",
+          "No fake MRPs or crossed prices"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Grid layout displays multiple products",
+        "Each product card shows trust score, account age, return %, and review risk",
+        "Prices shown without crossed-out MRPs",
+        "Products clickable to navigate to detail page"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Build detailed product page with trust information appearing BEFORE price and purchase actions. Top section (no scroll required) must display: product name, seller trust score (0-100) with tooltip explanation, seller account age, return percentage, and fake review risk indicator (Low/Medium/High).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Priority: Trust information must appear BEFORE price and purchase actions.",
+          "Top section (no scroll): - Product name - Seller Trust Score (0–100) with tooltip explanation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Trust metrics visible without scrolling",
+        "Trust score includes explanatory tooltip",
+        "All five required fields present in top section",
+        "Trust information positioned above price section"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add product page price section showing final price clearly with explicit breakdown (tax, delivery, warranty), with no fake MRPs or crossed prices. Include calm CTA button with text 'Proceed to Secure Checkout' without countdowns, stock pressure, or urgency manipulation.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Price section: - No fake MRPs or crossed prices - Final price clearly shown - Explicit breakdown (tax, delivery, warranty)",
+          "CTA behavior: - Calm wording like \"Proceed to Secure Checkout\" - No countdowns, no stock pressure, no urgency manipulation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Price breakdown shows tax, delivery, and warranty separately",
+        "No artificial discounts or crossed-out prices",
+        "CTA uses exact text 'Proceed to Secure Checkout'",
+        "No countdown timers or stock warnings present"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create reviews section on product page showing only verified buyer reviews that unlock after delivery and usage time. Each review must display 'Used for X days', be weighted by user history, and show timeline-based display instead of simple star averages. Include automatic de-emphasis of repeated phrases and suspicious patterns, with warning indicators for sudden rating spikes.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Reviews section: - Only verified buyers can review - Reviews unlock only after delivery and usage time - Each review shows \"Used for X days\" - Reviews weighted by user history"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each review displays 'Used for X days' badge",
+        "Reviews show user history badges/weights",
+        "Timeline-based display implemented",
+        "Suspicious pattern warnings visible when triggered",
+        "Only verified reviews can be displayed"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add seller transparency panel to product page showing: seller history timeline, total orders completed, disputes won vs lost, policy violations (last 6 months), platform penalties publicly visible, and lifetime-based seller trust score that cannot be reset. Panel must be prominent and easily accessible.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Seller transparency panel: - Seller history timeline - Total orders completed - Disputes won vs lost - Policy violations (last 6 months) - Platform penalties publicly visible - Seller trust score is lifetime-based and cannot be reset"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All six seller metrics displayed in panel",
+        "History timeline shows chronological seller activity",
+        "Violations and penalties visible to all users",
+        "Trust score shows lifetime calculation basis",
+        "Panel positioned prominently on product page"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Include decision support sections on product page: 'Who should buy this product', 'Who should avoid this product', 'Honest trade-offs and limitations', and 'Top public return reasons' (quality, size, mismatch). Content must be informative and honest, not sales-driven.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Decision support sections: - Who should buy this product - Who should avoid this product - Honest trade-offs and limitations - Top public return reasons (quality, size, mismatch)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All four decision support sections present",
+        "Return reasons aggregated and displayed publicly",
+        "Content uses honest, non-manipulative language",
+        "Trade-offs presented fairly"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Build checkout page with simple, anxiety-free design featuring clear escrow and refund timelines with exact dates, security reassurance without fear-based messaging, and reinforcement of platform protection and seller accountability. Use calm, professional styling.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "CHECKOUT EXPERIENCE: - Simple, anxiety-free design - Clear escrow and refund timelines with exact dates - Security reassurance without fear-based messaging - Reinforce platform protection and seller accountability"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Checkout flow uses minimal, calm design",
+        "Escrow timeline shows specific dates",
+        "Refund policy clearly stated with dates",
+        "Security messaging positive, not fear-based",
+        "Platform protection terms visible"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Create admin panel for managing sellers including adding new sellers, setting seller trust scores (0-100), entering seller account age, total orders completed, disputes won/lost, policy violations, and platform penalties. Allow editing and viewing seller history timeline.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Admin panel: A backend management system where you can manually add sellers, products, trust scores, and verified reviews"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Admin can create new seller profiles",
+        "All seller metrics editable (trust score, age, orders, disputes, violations, penalties)",
+        "Seller list view with search/filter",
+        "Seller history timeline can be populated",
+        "Changes reflect immediately on product pages"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Add admin panel functionality for managing products including creating products, associating them with sellers, setting prices with tax/delivery/warranty breakdowns, uploading product images, and entering decision support content (who should buy, who should avoid, trade-offs, return reasons). Allow setting fake review risk indicator (Low/Medium/High) and return percentage.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Admin panel: A backend management system where you can manually add sellers, products, trust scores, and verified reviews"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Admin can create products with all required fields",
+        "Products linked to seller accounts",
+        "Price breakdowns configurable",
+        "Product images uploadable",
+        "Decision support content editable per product",
+        "Review risk and return % settable"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Implement admin panel review management allowing manual creation of verified reviews, setting 'Used for X days' value, assigning user history weights/badges, marking reviews as verified, and flagging suspicious patterns. Reviews must be linkable to specific products and display on product pages immediately after creation.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Simplified review verification: Reviews will be manually marked as \"verified\" through the admin panel, with UI showing \"Used for X days\" and user history badges"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Admin can create reviews for any product",
+        "Usage days field configurable",
+        "User history badges assignable",
+        "Verified status toggleable",
+        "Suspicious pattern flag available",
+        "Reviews appear on product page after creation"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Implement dark mode variant with deep charcoal or near-black background, soft neutral grey cards, muted green or blue for trust indicators, red only for warnings/violations, fintech/compliance dashboard feel, and high contrast with low eye strain. Include toggle to switch between light and dark modes, persisting user preference.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "DARK MODE VARIANT: - Deep charcoal or near-black background - Soft neutral grey cards - Muted green or blue for trust indicators - Red only for warnings or violations - Fintech / compliance dashboard feel - High contrast, low eye strain"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dark mode uses specified color palette",
+        "Trust indicators use muted green/blue in dark mode",
+        "Red reserved for warnings in both modes",
+        "Theme toggle present and functional",
+        "User preference persists across sessions",
+        "All pages support both themes"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Apply visual style across all pages: minimal, professional, authority-driven design with neutral colors (white, light grey, soft blue or green), strong typography hierarchy, functional micro-interactions only, and mobile-first responsive layout. Avoid blue and purple color schemes. Ensure calm, strict, honest, authoritative, fair brand personality throughout.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "VISUAL STYLE: - Minimal, professional, authority-driven design - Neutral colors (white, light grey, soft blue or green) - Strong typography hierarchy - Functional micro-interactions only - Mobile-first, responsive layout",
+          "Brand personality: Calm, strict, honest, authoritative, fair."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Consistent neutral color palette across all pages",
+        "Typography hierarchy clear and professional",
+        "Responsive design works on mobile, tablet, desktop",
+        "Micro-interactions subtle and functional",
+        "No aggressive or sales-driven UI patterns",
+        "Brand personality reflected in all design choices"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Implement algorithm transparency on catalog/browsing page where every product recommendation includes visible explanation text like 'Shown because of your browsing history, seller trust score, and low return rate.' Ensure no hidden ranking boosts and no paid placements disguised as recommendations.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "ALGORITHM TRANSPARENCY: - Every product recommendation must include a visible explanation: \"Shown because of your browsing history, seller trust score, and low return rate.\" - No hidden ranking boosts - No paid placements disguised as recommendations"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each product shows recommendation explanation",
+        "Explanation text clearly visible",
+        "Recommendation logic transparent and honest",
+        "No paid placement indicators",
+        "Admin can configure recommendation reasons per product"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Create backend data models and API endpoints for Sellers (with trust score, account age, orders, disputes, violations, penalties, history timeline), Products (with name, price breakdown, images, decision support content, fake review risk, return percentage, seller association), and Reviews (with verified status, usage days, user history weight, suspicious pattern flag, product association). Implement CRUD operations accessible from admin panel.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-3",
+          "msg-4"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Seller model includes all trust metrics",
+        "Product model includes all price and support fields",
+        "Review model includes verification fields",
+        "API endpoints support create, read, update, delete",
+        "Admin panel can access all CRUD operations",
+        "Data persists across canister upgrades"
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Populate initial mock data demonstrating the platform with 3-5 realistic seller profiles (varying trust scores from 45 to 92), 10-15 products across different categories, and 20-30 verified reviews with varied usage days and user history badges. Include examples of sellers with violations, products with high/low return rates, and suspicious review patterns to showcase trust system.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Mock realistic data demonstrating trust scores, seller history, and verified reviews"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 3 seller profiles with different trust scores",
+        "At least 10 products with varied trust indicators",
+        "At least 20 reviews distributed across products",
+        "Mock data includes examples of violations and warnings",
+        "Data showcases both good and problematic sellers",
+        "Reviews demonstrate verification and weighting system"
+      ]
+    }
+  ],
+  "constraints": [
+    "No dark patterns or manipulative UI techniques allowed",
+    "No fake discounts, artificial urgency, or countdown timers",
+    "Trust information must appear before purchase actions on product pages",
+    "Seller trust scores must be lifetime-based and never resettable",
+    "Reviews can only be marked as verified through admin panel",
+    "No hidden ranking algorithms or paid placements",
+    "All content must use calm, respectful, non-marketing tone",
+    "Platform must avoid blue and purple color schemes unless explicitly requested",
+    "Mobile-first responsive design required for all pages"
+  ],
+  "nonGoals": [
+    "Automated delivery tracking system",
+    "Real-time payment processing integration",
+    "User registration and authentication system for buyers",
+    "Seller self-service registration portal",
+    "Automated review verification based on delivery status",
+    "Real-time inventory management",
+    "Order fulfillment and shipping integration",
+    "Email notification system",
+    "Advanced recommendation algorithm with machine learning",
+    "Mobile native application",
+    "Multi-language support",
+    "Social media integration"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Professional, authority-driven NISHQ logo with clean typography emphasizing trust and certainty (nishq-logo.dim_400x100.png)",
+      "Minimalist hero section background illustration showing trust and transparency concepts with neutral colors and geometric shapes (hero-background.dim_1920x600.png)",
+      "Icon set for trust indicators: shield for trust score, calendar for account age, return arrow for return rate, warning triangle for fake review risk (trust-icons.dim_256x256.png)",
+      "Fintech-style dashboard illustration for admin panel with neutral tones and professional aesthetic (admin-dashboard-bg.dim_1600x900.png)"
+    ],
+    "edits": []
+  }
+}

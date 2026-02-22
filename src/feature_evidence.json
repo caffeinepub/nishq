@@ -1,0 +1,322 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-landing-page-with-hero-section-containing-headline-buy-with-certainty-not-guesswork-subheadline-verified-reviews-transparent-sellers-and-lifetime-trust-scores-so-you-always-know-what-you-re-buying-primary-cta-browse-trusted-products-and-secondary-cta-how-we-prevent-fake-reviews-include-above-the-fold-trust-signals-reviews-allowed-only-after-delivery-and-usage-time-seller-history-visible-to-everyone-no-fake-mrps-or-artificial-discounts-and-trust-scores-cannot-be-reset",
+      "featureTitle": "Create a landing page with hero section containing headline 'Buy with certainty. Not guesswork.', subheadline 'Verified reviews, transparent sellers, and lifetime trust scores — so you always know what you're buying.', primary CTA 'Browse Trusted Products', and secondary CTA 'How We Prevent Fake Reviews'. Include above-the-fold trust signals: reviews allowed only after delivery and usage time, seller history visible to everyone, no fake MRPs or artificial discounts, and trust scores cannot be reset.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/LandingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-landing-page-sections-for-why-nishq-exists-explaining-optimization-for-certainty-not-sales-why-we-are-different-listing-five-key-differentiators-verified-reviews-lifetime-seller-trust-scores-honest-pricing-public-return-patterns-explainable-recommendations-how-trust-is-calculated-delivery-success-return-behaviour-review-authenticity-public-dispute-outcomes-and-who-this-platform-is-for-careful-buyers-families-honest-sellers-include-footer-with-transparency-policy-grievance-process-and-contact-information",
+      "featureTitle": "Add landing page sections for 'Why Nishq exists' (explaining optimization for certainty not sales), 'Why we are different' (listing five key differentiators: verified reviews, lifetime seller trust scores, honest pricing, public return patterns, explainable recommendations), 'How trust is calculated' (delivery success, return behaviour, review authenticity, public dispute outcomes), and 'Who this platform is for' (careful buyers, families, honest sellers). Include footer with transparency policy, grievance process, and contact information.",
+      "files": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/pages/LandingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-product-catalog-browsing-page-showing-products-with-trust-indicators-including-seller-trust-score-0-100-seller-account-age-return-percentage-and-fake-review-risk-indicator-low-medium-high-display-products-in-grid-layout-with-product-image-name-final-price-without-fake-mrps-and-trust-metrics-visible-for-each-item",
+      "featureTitle": "Create product catalog/browsing page showing products with trust indicators including seller trust score (0-100), seller account age, return percentage, and fake review risk indicator (Low/Medium/High). Display products in grid layout with product image, name, final price without fake MRPs, and trust metrics visible for each item.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/CatalogPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-detailed-product-page-with-trust-information-appearing-before-price-and-purchase-actions-top-section-no-scroll-required-must-display-product-name-seller-trust-score-0-100-with-tooltip-explanation-seller-account-age-return-percentage-and-fake-review-risk-indicator-low-medium-high",
+      "featureTitle": "Build detailed product page with trust information appearing BEFORE price and purchase actions. Top section (no scroll required) must display: product name, seller trust score (0-100) with tooltip explanation, seller account age, return percentage, and fake review risk indicator (Low/Medium/High).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/ProductDetailPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-product-page-price-section-showing-final-price-clearly-with-explicit-breakdown-tax-delivery-warranty-with-no-fake-mrps-or-crossed-prices-include-calm-cta-button-with-text-proceed-to-secure-checkout-without-countdowns-stock-pressure-or-urgency-manipulation",
+      "featureTitle": "Add product page price section showing final price clearly with explicit breakdown (tax, delivery, warranty), with no fake MRPs or crossed prices. Include calm CTA button with text 'Proceed to Secure Checkout' without countdowns, stock pressure, or urgency manipulation.",
+      "files": [
+        "frontend/src/pages/ProductDetailPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-reviews-section-on-product-page-showing-only-verified-buyer-reviews-that-unlock-after-delivery-and-usage-time-each-review-must-display-used-for-x-days-be-weighted-by-user-history-and-show-timeline-based-display-instead-of-simple-star-averages-include-automatic-de-emphasis-of-repeated-phrases-and-suspicious-patterns-with-warning-indicators-for-sudden-rating-spikes",
+      "featureTitle": "Create reviews section on product page showing only verified buyer reviews that unlock after delivery and usage time. Each review must display 'Used for X days', be weighted by user history, and show timeline-based display instead of simple star averages. Include automatic de-emphasis of repeated phrases and suspicious patterns, with warning indicators for sudden rating spikes.",
+      "files": [
+        "frontend/src/pages/ProductDetailPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-seller-transparency-panel-to-product-page-showing-seller-history-timeline-total-orders-completed-disputes-won-vs-lost-policy-violations-last-6-months-platform-penalties-publicly-visible-and-lifetime-based-seller-trust-score-that-cannot-be-reset-panel-must-be-prominent-and-easily-accessible",
+      "featureTitle": "Add seller transparency panel to product page showing: seller history timeline, total orders completed, disputes won vs lost, policy violations (last 6 months), platform penalties publicly visible, and lifetime-based seller trust score that cannot be reset. Panel must be prominent and easily accessible.",
+      "files": [
+        "frontend/src/pages/ProductDetailPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-include-decision-support-sections-on-product-page-who-should-buy-this-product-who-should-avoid-this-product-honest-trade-offs-and-limitations-and-top-public-return-reasons-quality-size-mismatch-content-must-be-informative-and-honest-not-sales-driven",
+      "featureTitle": "Include decision support sections on product page: 'Who should buy this product', 'Who should avoid this product', 'Honest trade-offs and limitations', and 'Top public return reasons' (quality, size, mismatch). Content must be informative and honest, not sales-driven.",
+      "files": [
+        "frontend/src/pages/ProductDetailPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-checkout-page-with-simple-anxiety-free-design-featuring-clear-escrow-and-refund-timelines-with-exact-dates-security-reassurance-without-fear-based-messaging-and-reinforcement-of-platform-protection-and-seller-accountability-use-calm-professional-styling",
+      "featureTitle": "Build checkout page with simple, anxiety-free design featuring clear escrow and refund timelines with exact dates, security reassurance without fear-based messaging, and reinforcement of platform protection and seller accountability. Use calm, professional styling.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/CheckoutPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-admin-panel-for-managing-sellers-including-adding-new-sellers-setting-seller-trust-scores-0-100-entering-seller-account-age-total-orders-completed-disputes-won-lost-policy-violations-and-platform-penalties-allow-editing-and-viewing-seller-history-timeline",
+      "featureTitle": "Create admin panel for managing sellers including adding new sellers, setting seller trust scores (0-100), entering seller account age, total orders completed, disputes won/lost, policy violations, and platform penalties. Allow editing and viewing seller history timeline.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/admin/SellerForm.tsx",
+        "frontend/src/pages/admin/AdminSellersPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-admin-panel-functionality-for-managing-products-including-creating-products-associating-them-with-sellers-setting-prices-with-tax-delivery-warranty-breakdowns-uploading-product-images-and-entering-decision-support-content-who-should-buy-who-should-avoid-trade-offs-return-reasons-allow-setting-fake-review-risk-indicator-low-medium-high-and-return-percentage",
+      "featureTitle": "Add admin panel functionality for managing products including creating products, associating them with sellers, setting prices with tax/delivery/warranty breakdowns, uploading product images, and entering decision support content (who should buy, who should avoid, trade-offs, return reasons). Allow setting fake review risk indicator (Low/Medium/High) and return percentage.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/admin/ProductForm.tsx",
+        "frontend/src/pages/admin/AdminProductsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-admin-panel-review-management-allowing-manual-creation-of-verified-reviews-setting-used-for-x-days-value-assigning-user-history-weights-badges-marking-reviews-as-verified-and-flagging-suspicious-patterns-reviews-must-be-linkable-to-specific-products-and-display-on-product-pages-immediately-after-creation",
+      "featureTitle": "Implement admin panel review management allowing manual creation of verified reviews, setting 'Used for X days' value, assigning user history weights/badges, marking reviews as verified, and flagging suspicious patterns. Reviews must be linkable to specific products and display on product pages immediately after creation.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/admin/ReviewForm.tsx",
+        "frontend/src/pages/admin/AdminReviewsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-dark-mode-variant-with-deep-charcoal-or-near-black-background-soft-neutral-grey-cards-muted-green-or-blue-for-trust-indicators-red-only-for-warnings-violations-fintech-compliance-dashboard-feel-and-high-contrast-with-low-eye-strain-include-toggle-to-switch-between-light-and-dark-modes-persisting-user-preference",
+      "featureTitle": "Implement dark mode variant with deep charcoal or near-black background, soft neutral grey cards, muted green or blue for trust indicators, red only for warnings/violations, fintech/compliance dashboard feel, and high contrast with low eye strain. Include toggle to switch between light and dark modes, persisting user preference.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ThemeToggle.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-visual-style-across-all-pages-minimal-professional-authority-driven-design-with-neutral-colors-white-light-grey-soft-blue-or-green-strong-typography-hierarchy-functional-micro-interactions-only-and-mobile-first-responsive-layout-avoid-blue-and-purple-color-schemes-ensure-calm-strict-honest-authoritative-fair-brand-personality-throughout",
+      "featureTitle": "Apply visual style across all pages: minimal, professional, authority-driven design with neutral colors (white, light grey, soft blue or green), strong typography hierarchy, functional micro-interactions only, and mobile-first responsive layout. Avoid blue and purple color schemes. Ensure calm, strict, honest, authoritative, fair brand personality throughout.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Header.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-algorithm-transparency-on-catalog-browsing-page-where-every-product-recommendation-includes-visible-explanation-text-like-shown-because-of-your-browsing-history-seller-trust-score-and-low-return-rate-ensure-no-hidden-ranking-boosts-and-no-paid-placements-disguised-as-recommendations",
+      "featureTitle": "Implement algorithm transparency on catalog/browsing page where every product recommendation includes visible explanation text like 'Shown because of your browsing history, seller trust score, and low return rate.' Ensure no hidden ranking boosts and no paid placements disguised as recommendations.",
+      "files": [
+        "frontend/src/pages/CatalogPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

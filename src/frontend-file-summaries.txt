@@ -1,0 +1,20 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining all routes (landing, catalog, product detail, checkout, admin pages) and wrapping with ThemeProvider and Layout.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations including products, sellers, reviews, user profiles, and admin mutations with proper cache invalidation.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper component providing consistent structure with Header, main content area, and Footer across all pages.",
+  "frontend/src/components/Header.tsx": "Navigation header with NISHQ logo, responsive menu, authentication controls, theme toggle, and admin navigation links for authorized users.",
+  "frontend/src/components/Footer.tsx": "Footer component with transparency policy links, contact information, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/ThemeToggle.tsx": "Theme toggle button component switching between light and dark modes using next-themes.",
+  "frontend/src/pages/LandingPage.tsx": "Trust-first landing page with hero section, trust signals, platform differentiators, trust calculation explanation, and target audience sections.",
+  "frontend/src/pages/CatalogPage.tsx": "Product catalog page displaying products in grid layout with trust indicators, using useNavigate for type-safe navigation to product detail pages.",
+  "frontend/src/pages/ProductDetailPage.tsx": "Detailed product page with trust information, seller transparency panel, verified reviews, and decision support sections, using useNavigate for type-safe checkout navigation.",
+  "frontend/src/pages/CheckoutPage.tsx": "Calm, anxiety-free checkout page with shipping form, payment method selection, escrow timeline with exact dates, and platform protection reassurance.",
+  "frontend/src/pages/admin/AdminSellersPage.tsx": "Admin panel for managing sellers with CRUD operations, search/filter functionality, and display of all seller trust metrics.",
+  "frontend/src/components/admin/SellerForm.tsx": "Reusable form component for creating/editing sellers with all trust metrics fields and history timeline input.",
+  "frontend/src/pages/admin/AdminProductsPage.tsx": "Admin panel for managing products with image upload, seller association, pricing, and decision support content configuration.",
+  "frontend/src/components/admin/ProductForm.tsx": "Reusable form component for creating/editing products with image upload using ExternalBlob, progress tracking, and all product fields.",
+  "frontend/src/pages/admin/AdminReviewsPage.tsx": "Admin panel for managing reviews with verification controls, usage days configuration, and display of all review details.",
+  "frontend/src/components/admin/ReviewForm.tsx": "Reusable form component for creating/editing reviews with product selection, rating, usage days, content, and verification checkbox.",
+  "frontend/src/index.css": "Global styles with OKLCH color system for light/dark modes, neutral professional palette with soft green for trust indicators and red for warnings only.",
+  "frontend/tailwind.config.js": "Tailwind configuration with dark mode support, custom color tokens, Inter font family, professional shadows, and fintech-inspired design system."
+}
